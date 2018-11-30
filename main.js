@@ -2,29 +2,29 @@ const items = [
   {
     id: 1,
     img: 'assets/image1.jpg',
-    title: 'First',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Рождественский снеговички',
+    description: 'Три снеговичка в наборе',
     price: '120,00'
   },
   {
     id: 22,
     img: 'assets/image2.jpg',
-    title: 'Second',
-    description: 'some second desc',
+    title: 'Игрушки на елку "Парочка"',
+    description: 'Размер 120х30х100 см',
     price: '80,00'
   },
   {
     id: 33,
     img: 'assets/image3.jpeg',
-    title: 'third',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur elit ut massa ornare elementum. Cras commodo quis metus et tincidunt. ',
+    title: 'Игрушка на елку "Домовенок"',
+    description: 'Домовенок для охраны и уюта',
     price: '100,00'
   },
   {
     id: 44,
     img: 'assets/image4.jpg',
-    title: 'vorth',
-    description: 'some vorth desc',
+    title: 'Рождественские звезвы',
+    description: 'Размер 20х30х100 см',
     price: '10,00'
   },
 ]

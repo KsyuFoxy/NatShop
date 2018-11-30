@@ -30,13 +30,19 @@ body {
   }
   section {
     margin-top: 100px;
+    margin: 100px 10px;
+
+    @media (min-width: 1024px) {
+      max-width: 1400px;
+      margin: 100px auto;
+    }
+  }
+  .collection-name {
+    font-family: 'Marck Script', cursive;
+    margin: 20px 0;
+    font-size: 30px;
   }
   .shop-content {
-    .collection-name {
-      font-family: 'Sedgwick Ave', cursive;
-      margin: 20px 0;
-    }
-
     .items-box {
       display: flex;
       flex-wrap: wrap;
@@ -71,6 +77,7 @@ body {
           .title {
             margin: 15px 5px 10px;
             font-weight: 900;
+            font-size: 20px;
           }
           .price {
             font-weight: 900;
