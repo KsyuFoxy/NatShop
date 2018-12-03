@@ -23,7 +23,7 @@ const items = [
   {
     id: 44,
     img: 'assets/image4.jpg',
-    title: 'Рождественские звезвы',
+    title: 'Рождественские звезды',
     description: 'Размер 20х30х100 см',
     price: '10,00'
   },
@@ -62,7 +62,7 @@ function addItem() {
 
     const button = document.createElement('button');
     button.setAttribute('class', 'button');
-    button.textContent = 'Заказать';
+    button.textContent = 'В корзину';
     itemContent.appendChild(button);
   })
 }
@@ -77,3 +77,47 @@ products.forEach(product => {
     console.log('orderedId', orderedId)
   })
 })
+// create Table for cart
+
+function tableCreate() {
+  const cart = document.getElementById('cartContent');
+  const table = document.createElement('table');
+  table.style.width = '100%';
+  table.setAttribute('border', '1');
+  const tbody = document.createElement('tbody');
+  for (let i = 0; i < 3; i++) {
+    const tr = document.createElement('tr');
+    for (let j = 0; j < 2; j++) {
+      if (i == 2 && j == 1) {
+        break
+      } else {
+        const td = document.createElement('td');
+        td.appendChild(document.createTextNode('\u0020'))
+        i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
+        tr.appendChild(td)
+      }
+    }
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+  cart.appendChild(table)
+}
+tableCreate();
+
+// Modal
+const modal = document.getElementById('cartModal');
+const cartButton = document.getElementById("cartButton");
+const close = document.getElementsByClassName("close")[0];
+
+cartButton.onclick = function() {
+    modal.style.display = "block";
+}
+close.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
